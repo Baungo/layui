@@ -116,7 +116,7 @@ layui.define('jquery', function(exports){
       }() : item.offset().top;
 
       /* 始终只加载在当前屏范围内的图片 */
-      if(elemTop >= start && elemTop <= end){
+      if((elemTop+height) >= start && elemTop <= end){
         if(!item.attr('src')){
           var src = item.attr('lay-src');
           layui.img(src, function(){
